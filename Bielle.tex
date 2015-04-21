@@ -133,12 +133,12 @@ Longueur bielle & $L$ & 0.12885 & \meter \\
 \hline 
 Cylindrée & $V_c$ & 324.25 & \cubic\centi\metre \\ 
 \hline 
-Taux de compression & $\tau$ & 10 & / \\ 
+Taux de compression & $\tau$ & 8.2 & / \\ 
 \hline 
 \end{tabular} 
 \end{center}
 
-Le taux de compression d'un moteur essence à explosion se situe généralement entre 8 et 13, étant généralement assez proche de 10\footnote{Sources : \textit{http://en.wikipedia.org/wiki/Compression\_ratio} et \textit{http://www.super-soupape.com/taux\_de\_compression.php}}.
+Pour trouver le taux de compression de notre moteur, nous nous sommes basé sur les données issues d'iCampus (voir 1) pour trouver le moteur correspondant. Il s'agit d'un moteur GM provenant d'une Opel Kadett de 1979 ou 1985  dont les données ci-dessus sont identiques et le taux de compression est de \unit{8.2} (voir 2 et 3).
 
 
 Concernant les groupes partenaires, nous n'en n'avons pas, nous étions à une table sans autres groupes, la table 14.
@@ -158,12 +158,12 @@ Les deux courbes représentent ici respectivement les efforts sur le pied et la 
 \begin{figure}[h]
 \centering
     \begin{subfigure}[b]{0.45\textwidth}
-    				\includegraphics[scale=0.51]{Schema/forces_3000rpm.eps}
+    				\includegraphics[scale=0.4]{Schema/forces_3000rpm.eps}
                 \caption{\unit{3000}{rpm}}
                 \label{fig:forces_3000rpm}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-        			\includegraphics[scale=0.51]{Schema/forces_5000rpm.eps}
+        			\includegraphics[scale=0.4]{Schema/forces_5000rpm.eps}
                 \caption{\unit{5000}{rpm}}
                 \label{fig:forces_5000rpm}
     \end{subfigure}
@@ -180,9 +180,9 @@ Les efforts maximums de traction et de compression sont :
 		\hline 
   		& \textbf{Pied} & \textbf{Tête} \\ 
 		\hline 
-		\textbf{Compression} & \unit{31.397}{ \kilo\newton} & \unit{29.487}{\kilo\newton} \\ 
+		\textbf{Compression} & \unit{28.786}{ \kilo\newton} & \unit{26.887}{\kilo\newton} \\ 
 		\hline 
-		\textbf{Traction} & \unit{0.677}{ \kilo\newton} & \unit{2.65}{ \kilo\newton} \\ 
+		\textbf{Traction} & \unit{0.677}{ \kilo\newton} & \unit{2.650}{ \kilo\newton} \\ 
 		\hline 
 		\end{tabular}
 		\caption{\unit{3000}{rpm}}
@@ -192,7 +192,7 @@ Les efforts maximums de traction et de compression sont :
 		\hline 
   		& \textbf{Pied} & \textbf{Tête} \\ 
 		\hline 
-		\textbf{Compression} & \unit{29.462}{ \kilo\newton} & \unit{24.162}{ \kilo\newton}\\ 
+		\textbf{Compression} & \unit{26.862}{ \kilo\newton} & \unit{21.601}{ \kilo\newton}\\ 
 		\hline 
 		\textbf{Traction} & \unit{2.676}{ \kilo\newton} & \unit{8.157}{\kilo\newton} \\ 
 		\hline 
@@ -209,12 +209,12 @@ La partie positive du graphe représente un effort de compression tandis que le 
 \begin{figure}[h!]
 \centering
     \begin{subfigure}[b]{0.45\textwidth}
-    				\includegraphics[scale=0.51]{Schema/forces_tot_3000rpm.eps}
+    				\includegraphics[scale=0.4]{Schema/forces_tot_3000rpm.eps}
                 \caption{\unit{3000}{rpm}}
                 \label{fig:forces_tot_3000rpm}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-                \includegraphics[scale=0.51]{Schema/forces_tot_5000rpm.eps}
+                \includegraphics[scale=0.4]{Schema/forces_tot_5000rpm.eps}
                 \caption{\unit{5000}{rpm}}
                 \label{fig:forces_tot_5000rpm}
     \end{subfigure}
@@ -229,9 +229,9 @@ Les efforts maximums sont :
     \begin{subfigure}[b]{0.45\textwidth}
     \begin{tabular}{|c|c|}
 		\hline 
-		\textbf{Compression} & \unit{60.884}{\kilo\newton} \\ 
+		\textbf{Compression} & \unit{55.670}{\kilo\newton} \\ 
 		\hline 
-		\textbf{Traction} & \unit{3.387}{\kilo\newton} \\ 
+		\textbf{Traction} & \unit{3.327}{\kilo\newton} \\ 
 		\hline 
 		\end{tabular} 
         \caption{\unit{3000}{rpm}}
@@ -239,7 +239,7 @@ Les efforts maximums sont :
     \begin{subfigure}[b]{0.45\textwidth}
         \begin{tabular}{|c|c|}
 		\hline 
-		\textbf{Compression} & \unit{53.623}{\kilo\newton} \\ 
+		\textbf{Compression} & \unit{48.462}{\kilo\newton} \\ 
 		\hline 
 		\textbf{Traction} & \unit{10.832}{\kilo\newton} \\ 
 		\hline 
@@ -257,5 +257,13 @@ La bielle étant contrainte à des efforts de traction et principalement de comp
 
 
 \section{Dimensionnement de la section de la bielle}
+
+\section{Biblio}
+\paragraph{1}
+\url{http://icampus.uclouvain.be/claroline/backends/download.php?url=L01lc3VyZXNfZXRfcGxhbnMvTE1FQ0ExMjEwXy1fTGlzdGVfZGVzX21vdGV1cnNfMjAxNS5wZGY%3D&cidReset=true&cidReq=LMECA1210}
+\paragraph{2}
+\url{http://carspector.com/car/opel/009029/}
+\paragraph{3}
+\url{http://www.carfolio.com/specifications/models/car/?car=11319}
 
 \end{document}

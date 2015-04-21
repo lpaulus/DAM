@@ -12,6 +12,7 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{amsmath,amssymb,array}
 \usepackage{url}
 \usepackage{fancyhdr}
@@ -140,25 +141,34 @@ Taux de compression & $\tau$ & 10 & / \\
 Le taux de compression d'un moteur essence à explosion se situe généralement entre 8 et 13, étant généralement assez proche de 10.
 
 
-
-\section{Évolution de le pression dans le cylindre}
+Concernant les groupes partenaires, nous n'en n'avons pas.
+\section{Évolution de le pression dans le cylindre d'un moteur essence}
 
 \begin{center}
-\includegraphics[scale=1]{Schema/pression.eps}
+\includegraphics[scale=0.5]{Schema/pression.eps}
 \end{center}
 
 
 
 \section{Efforts sur la bielle en fonction de l'angle du vilebrequin}
 
-\subsection{Vitesse : 3000 rpm}
-\begin{center}
-\includegraphics[scale=1]{Schema/forces_3000rpm.eps}
-\end{center}
-
+\subsection{Vitesse : \unit{3000}{rpm}}
+\begin{figure}
+\centering
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[scale=0.5]{Schema/forces_3000rpm.eps}
+                \caption{}
+                \label{fig:forces_3000rpm}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+                \includegraphics[scale=0.5]{Schema/forces_tot_3000rpm.eps}
+                \caption{}
+                \label{fig:forces_tot_3000rpm}
+    \end{subfigure}
+\end{figure}
 Les deux courbes représentent ici respectivement les efforts sur le pied et la tête de la bielle. Puisque les deux forces sont représentées positives vers le bas, il s'agit de compression lorsque la force sur le pied est positive, et celle sur la tête négative, et de traction dans l'autre cas. 
 
-Les efforts maximums de traction et de compressions sont :
+Les efforts maximums de traction et de compression sont :
 
 \begin{center}
 \begin{tabular}{|c|c|c|}
@@ -174,10 +184,6 @@ Les efforts maximums de traction et de compressions sont :
 
 Afin de représenter l'effort total que subit la bielle, il faut donc faire la différence de l'effort sur le pied avec celui sur la tête.
 
-\begin{center}
-\includegraphics[scale=1]{Schema/forces_tot_3000rpm.eps}
-\end{center}
-
 La partie positive du graphe représente un effort de compression tandis que le négative représente de la traction.
 Les efforts maximums sont : 
 
@@ -192,10 +198,20 @@ Les efforts maximums sont :
 \end{center}
 
 \subsection{Vitesse : 5000 rpm}
+\begin{figure}
+\centering
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[scale=0.5]{Schema/forces_5000rpm.eps}
+                \caption{}
+                \label{fig:forces_5000rpm}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+                \includegraphics[scale=0.5]{Schema/forces_tot_5000rpm.eps}
+                \caption{}
+                \label{fig:forces_tot_5000rpm}
+    \end{subfigure}
+\end{figure}
 
-\begin{center}
-\includegraphics[scale=1]{Schema/forces_5000rpm.eps}
-\end{center}
 
 Les conventions sont les mêmes que pour ceux à \unit{3000}{rpm}. Les différents efforts sont : 
 
@@ -212,10 +228,6 @@ Les conventions sont les mêmes que pour ceux à \unit{3000}{rpm}. Les différen
 \end{center}
 
 A nouveau, l'effort total est représenté.
-
-\begin{center}
-\includegraphics[scale=1]{Schema/forces_tot_5000rpm.eps}
-\end{center}
 
 Les efforts maximums sont : 
 

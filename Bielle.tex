@@ -223,28 +223,32 @@ La partie positive du graphe des figures \ref{fig:forces_tot_3000rpm} et \ref{fi
     \caption{}
 \end{figure}
 
-Les efforts maximums sont repris dans les tableaux \ref{fig:max_3000rpm} et \ref{fig:max_5000rpm} 
+Les efforts maximums et minimums sont repris dans les tableaux \ref{fig:max_3000rpm} et \ref{fig:max_5000rpm}. Les efforts minimums sont 0; il est logique que quand il y a de la traction, il n'y ait pas de compression et vice-versa.
 
 
 \begin{figure}[h!]
 \centering
     \begin{subfigure}[b]{0.45\textwidth}
-    \begin{tabular}{|c|c|}
+    		\begin{tabular}{|c|c|c|}
+    		\hline
+    		&\textbf{Max}&\textbf{Min}\\
 		\hline 
-		\textbf{Compression} & \unit{55.670}{\kilo\newton} \\ 
+		\textbf{Compression} & \unit{55.670}{\kilo\newton} & 0\\ 
 		\hline 
-		\textbf{Traction} & \unit{3.327}{\kilo\newton} \\ 
+		\textbf{Traction} & \unit{3.327}{\kilo\newton} & 0\\ 
 		\hline 
 		\end{tabular} 
         \caption{\unit{3000}{rpm}}
         \label{fig:max_3000rpm}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-        \begin{tabular}{|c|c|}
+        \begin{tabular}{|c|c|c|}
+        \hline
+    		&\textbf{Max}&\textbf{Min}\\
 		\hline 
-		\textbf{Compression} & \unit{48.462}{\kilo\newton} \\ 
+		\textbf{Compression} & \unit{48.462}{\kilo\newton}&0 \\ 
 		\hline 
-		\textbf{Traction} & \unit{10.832}{\kilo\newton} \\ 
+		\textbf{Traction} & \unit{10.832}{\kilo\newton} &0\\ 
 		\hline 
 		\end{tabular} 
         \caption{\unit{5000}{rpm}}

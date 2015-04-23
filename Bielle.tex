@@ -266,6 +266,53 @@ La bielle étant contrainte à des efforts de traction et principalement de comp
 
 \section{Dimensionnement de la section de la bielle}
 
+Nous avons effectué divers calculs afin de dimensionner la section (effort de flambage) nécessaire pour que la bielle résite aux différents efforts calculés précédemment. Pour cela, nous avons utilisé la formule de Rankine, à savoir : 
+{$$\sigma_{fb Rankine} = \frac{F_b}{A_{crit}}(1+\lambda^2) = \frac{R_e}{S_{Rankine}}$$
+En sachant que : 
+$$ \lambda = \frac{\lambda_{barre}}{\lambda_{lim Euler}} $$
+$$ \lambda_{barre} = \frac{l_{f}}{I_g}$$
+$$ i_g = \sqrt{\frac{I}{A_{crit}}}$$
+$$ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}$$
+
+ \begin{tabular}{|c|c|c|}
+        \hline
+    		\textbf{Notations}&\textbf{Significations}&\textbf{Valeurs}\\
+		\hline 
+		$\sigma_{fb Rankine}$ & Contrainte de flambement suivant Rankine & \unit{241,18}{} \\ 
+		\hline 
+		$R_e$ & Limite d'élasticité & \unit{410}{\pascal} \\ 
+		\hline 
+		$E$ & Module de Young & \unit{170000}{\pascal} \\ 
+		\hline 
+		$\lambda_{lim Euler}$ & L'élancement limite d'Euler & $ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}$ \\ 
+		\hline 
+		$\lambda_{barre}$ & Elancement réel de la barre & $ \lambda_{barre} = \frac{l_{f}}{I_g}$\\
+		\hline 
+		$i_g$ & Rayon de giration de la section critique & $ i_g = \sqrt{\frac{I}{A_{crit}}}$ \\
+		\hline 
+		$\lambda$ & L'élancement réduit & $ \lambda = \frac{\lambda_{barre}}{\lambda_{lim Euler}} $ \\
+		\hline 
+		$F_b$ & Effort total maximum transmis par la bielle & \unit{4,8*10^4}{Newton}\\
+		\hline 
+		$l_f$ & Longueur de flambement & \unit{0.1285}{} \\
+		\hline 
+		$S_{Rankine}$ & Coefficient de sécurité & {1,7} [/] \\
+		\hline 
+		$I$ & Moment d'inertie de la section & \unit{3489,84}{\pascal} \\
+		\hline
+		$A_{crit}$ & Section critique & Inconnue\\
+		\hline 
+		\end{tabular} \\
+		\\
+Remarque pour le calcul du moment d'inertie de la section: en se référant à la figure (LEAAAA) pour les différentes longeurs de la section en "I". Sur base de celle-ci, le moment d'inertie vaut:
+$$ I = \frac{1}{12} (2,25t (3,4t)^3 - 2,3t (2,3t)^3) = \unit{5,86}{mm^2}$$
+Maintenant que toutes les valeurs sont connues, il ne nous reste plus qu'à isoler notre inconnue, à savoir la section, puis de résoudre grace à Matlab. A savoir : 
+
+$$ A_{crit} = - \frac{F_b}{\sigma ( \frac{F_B (l_f)^2}{\sigma \lambda_l I} - 1)} = \unit{1,99}{cm^2}$$
+
+Nous pouvons donc comparer la valeur théorique obtenue ci-dessus avec la section réelle de notre bielle mesurée en laboratoire. Cette section est approximativement de 
+\unit{147,19}{mm^2} à laquelle il faut encore ajouter l'aire occupée par les partie arrondie de la section. On peut donc conclure que la valeur théorique obtenue est sensiblement proche de la valeur réelle.
+		
 \section{Biblio}
 \paragraph{1}
 \url{http://icampus.uclouvain.be/claroline/backends/download.php?url=L01lc3VyZXNfZXRfcGxhbnMvTE1FQ0ExMjEwXy1fTGlzdGVfZGVzX21vdGV1cnNfMjAxNS5wZGY%3D&cidReset=true&cidReq=LMECA1210}

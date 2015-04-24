@@ -139,7 +139,7 @@ Taux de compression & $\tau$ & 8.2 & / \\
 \end{tabular} 
 \end{center}
 
-Pour trouver le taux de compression de notre moteur, nous nous sommes basé sur les données issues d'iCampus (voir 1) pour trouver le moteur correspondant. Il s'agit d'un moteur GM provenant d'une Opel Kadett de 1979 ou 1985  dont les données ci-dessus sont identiques et le taux de compression est de \unit{8.2} (voir 2 et 3).
+Pour trouver le taux de compression de notre moteur, nous nous sommes basé sur les données issues d'iCampus~\cite{icampus} pour trouver le moteur correspondant. Il s'agit d'un moteur GM provenant d'une Opel Kadett de 1979 ou 1985  dont les données ci-dessus sont identiques et le taux de compression est de \unit{8.2} (voir~\cite{carspector} et~\cite{carfolio}).
 
 
 Concernant les groupes partenaires, nous n'en n'avons pas, nous étions à une table sans autres groupes, la table 14.
@@ -176,7 +176,7 @@ Les deux courbes à la figure~\ref{fig:EffortBielle} représentent ici respectiv
 \end{figure}
 
 
-Les tableaux~\ref{fig:EffortMaxtrac}reprennent les efforts maximums de traction et de compression :
+Les tableaux~\ref{fig:EffortMaxtrac} reprennent les efforts maximums de traction et de compression :
 
 \begin{figure}[h]
 \centering
@@ -212,7 +212,7 @@ Les tableaux~\ref{fig:EffortMaxtrac}reprennent les efforts maximums de traction 
 
 Afin de représenter l'effort total que subit la bielle, il faut donc faire la différence de l'effort sur le pied avec celui sur la tête.
 
-La partie positive des graphes de la figure\ref{fig:Effort_totaux} représente un effort de compression tandis que le négative représente de la traction.
+La partie positive des graphes de la figure~\ref{fig:Effort_totaux} représente un effort de compression tandis que le négative représente de la traction.
 
 \begin{figure}[h!]
 %\centering
@@ -231,7 +231,7 @@ La partie positive des graphes de la figure\ref{fig:Effort_totaux} représente u
     \label{fig:Effort_totaux}
 \end{figure}
 
-Les efforts maximums et minimums sont repris dans les tableaux \ref{fig:max_3000rpm} et \ref{fig:max_5000rpm}. Les efforts minimums sont 0; il est logique que lorsqu'il y a de la traction, il n'y ait pas de compression et vice-versa.
+Les efforts maximums et minimums sont repris dans les tableaux~\ref{fig:max_3000rpm} et~\ref{fig:max_5000rpm}. Les efforts minimums sont 0; il est logique que lorsqu'il y a de la traction, il n'y ait pas de compression et vice-versa.
 
 
 \begin{figure}[h!]
@@ -323,12 +323,19 @@ $$ A_{crit} = - \frac{F_b}{\sigma ( \frac{F_B (l_f)^2}{\sigma \lambda_l I} - 1)}
 Nous pouvons donc comparer la valeur théorique obtenue ci-dessus avec la section réelle de notre bielle mesurée en laboratoire. Cette section est approximativement de 
 \unit{147,19}{mm^2} à laquelle il faut encore ajouter l'aire occupée par les partie arrondie de la section. On peut donc conclure que la valeur théorique obtenue est sensiblement proche de la valeur réelle.
 		
-\section{Biblio}
-\paragraph{1}
-\url{http://icampus.uclouvain.be/claroline/backends/download.php?url=L01lc3VyZXNfZXRfcGxhbnMvTE1FQ0ExMjEwXy1fTGlzdGVfZGVzX21vdGV1cnNfMjAxNS5wZGY%3D&cidReset=true&cidReq=LMECA1210}
-\paragraph{2}
-\url{http://carspector.com/car/opel/009029/}
-\paragraph{3}
-\url{http://www.carfolio.com/specifications/models/car/?car=11319}
 
+\begin{thebibliography}{9}
+
+\bibitem{carspector}
+\url{http://carspector.com/car/opel/009029/}
+
+\bibitem{icampus}
+\url{http://icampus.uclouvain.be/claroline/backends/download.php?url=L01lc3VyZXNfZXRfcGxhbnMvTE1FQ0ExMjEwXy1fTGlzdGVfZGVzX21vdGV1cnNfMjAxNS5wZGY%3D&cidReset=true&cidReq=LMECA1210}
+
+\bibitem{carfolio}
+\url{http://www.carfolio.com/specifications/models/car/?car=11319}
+\end{thebibliography}
+
+%\bibliography{biblio}{}
+%\bibliographystyle{plain}
 \end{document}

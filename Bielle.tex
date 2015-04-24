@@ -9,7 +9,8 @@
 \usepackage{sistyle}
 \usepackage[autolanguage]{numprint}
 \usepackage{pgfplots}
-\usepackage{geometry}
+\usepackage[margin=0.8in]{geometry}
+
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -64,7 +65,7 @@
 
 % Author and supervisor
 \begin{center}
-\includegraphics[trim=0cm 8cm 0cm 5cm, clip, width= 15 cm, height= 9.5 cm ]{Schema/bielle2.jpg}
+\includegraphics[trim=0cm 8cm 0cm 5cm, clip, width= 15 cm, height= 13 cm ]{Schema/bielle2.jpg}
 \end{center}
 \HRule \\[0 cm]
 
@@ -93,7 +94,7 @@ LMECA1210\\
 Hervé \textsc{Jeanmart}
 \end{flushright}
 \end{minipage}
-\vspace{0.3cm}
+\vspace{0.6cm}
 % Bottom of the page
 
 \begin{minipage}{0.3\textwidth}
@@ -114,7 +115,7 @@ Hervé \textsc{Jeanmart}
 \end{minipage}
 \end{center}
 \end{titlepage}
-\tableofcontents
+%\tableofcontents
 
 
 
@@ -144,38 +145,42 @@ Pour trouver le taux de compression de notre moteur, nous nous sommes basé sur 
 Concernant les groupes partenaires, nous n'en n'avons pas, nous étions à une table sans autres groupes, la table 14.
 
 \section{Évolution de le pression dans le cylindre}
-
-\begin{center}
-\includegraphics[scale=0.75]{Schema/pression.eps}
-\end{center}
-
+Le graphique que nous avons obtenu sur Matlab se trouve à la figure~\ref{fig:pression}.
+\begin{figure}{h!}
+\centering
+\includegraphics[scale=0.65]{Schema/pression.eps}
+\caption{Évolution de la pression dans le cylindre}
+\label{fig:pression}
+\end{figure}
 
 
 \section{Efforts sur la bielle}
 
-Les deux courbes des figures \ref{fig:forces_3000rpm} et \ref{fig:forces_5000rpm} représentent ici respectivement les efforts sur le pied et la tête de la bielle. Puisque les deux forces sont représentées positives vers le bas, il s'agit de compression lorsque la force sur le pied est positive, et celle sur la tête négative, et de traction dans l'autre cas. 
+Les deux courbes à la figure~\ref{fig:EffortBielle} représentent ici respectivement les efforts sur le pied et la tête de la bielle. Puisque les deux forces sont représentées positives vers le bas, il s'agit de compression lorsque la force sur le pied est positive, et celle sur la tête négative, et de traction dans l'autre cas. 
 
 \begin{figure}[h]
-\centering
-    \begin{subfigure}[b]{0.45\textwidth}
-    				\includegraphics[scale=0.4]{Schema/forces_3000rpm.eps}
+%\centering
+    \begin{subfigure}[h]{0.45\textwidth}
+    				\includegraphics[scale=0.5]{Schema/forces_3000rpm.eps}
                 \caption{\unit{3000}{rpm}}
                 \label{fig:forces_3000rpm}
     \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        			\includegraphics[scale=0.4]{Schema/forces_5000rpm.eps}
+    \qquad
+    \begin{subfigure}[h]{0.45\textwidth}
+        			\includegraphics[scale=0.5]{Schema/forces_5000rpm.eps}
                 \caption{\unit{5000}{rpm}}
                 \label{fig:forces_5000rpm}
     \end{subfigure}
-    \caption{}
+    \caption{Efforts sur la bielle}
+    \label{fig:EffortBielle}
 \end{figure}
 
 
-Les tableaux \ref{fig:tab_forces_3000rpm} et \ref{fig:tab_forces_5000rpm} reprennent les efforts maximums de traction et de compression :
+Les tableaux~\ref{fig:EffortMaxtrac}reprennent les efforts maximums de traction et de compression :
 
 \begin{figure}[h]
 \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[h]{0.45\textwidth}
     		\begin{tabular}{|c|c|c|}
 		\hline 
   		& \textbf{Pied} & \textbf{Tête} \\ 
@@ -188,7 +193,7 @@ Les tableaux \ref{fig:tab_forces_3000rpm} et \ref{fig:tab_forces_5000rpm} repren
 		\caption{\unit{3000}{rpm}}
 		\label{fig:tab_forces_3000rpm}
     \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[h]{0.45\textwidth}
         	\begin{tabular}{|c|c|c|}
 		\hline 
   		& \textbf{Pied} & \textbf{Tête} \\ 
@@ -201,34 +206,37 @@ Les tableaux \ref{fig:tab_forces_3000rpm} et \ref{fig:tab_forces_5000rpm} repren
 		\caption{\unit{5000}{rpm}}
 		\label{fig:tab_forces_5000rpm}	
     \end{subfigure}
-    \caption{}
+    \caption{Efforts maximums de traction et de compression}
+    \label{fig:EffortMaxtrac}
 \end{figure}
 
 Afin de représenter l'effort total que subit la bielle, il faut donc faire la différence de l'effort sur le pied avec celui sur la tête.
 
-La partie positive du graphe des figures \ref{fig:forces_tot_3000rpm} et \ref{fig:forces_tot_5000rpm} représente un effort de compression tandis que le négative représente de la traction.
+La partie positive des graphes de la figure\ref{fig:Effort_totaux} représente un effort de compression tandis que le négative représente de la traction.
 
 \begin{figure}[h!]
-\centering
-    \begin{subfigure}[b]{0.45\textwidth}
-    				\includegraphics[scale=0.4]{Schema/forces_tot_3000rpm.eps}
+%\centering
+    \begin{subfigure}[h!]{0.45\textwidth}
+    				\includegraphics[scale=0.5]{Schema/forces_tot_3000rpm.eps}
                 \caption{\unit{3000}{rpm}}
                 \label{fig:forces_tot_3000rpm}
     \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-                \includegraphics[scale=0.4]{Schema/forces_tot_5000rpm.eps}
+    \qquad
+    \begin{subfigure}[h!]{0.45\textwidth}
+                \includegraphics[scale=0.5]{Schema/forces_tot_5000rpm.eps}
                 \caption{\unit{5000}{rpm}}
                 \label{fig:forces_tot_5000rpm}
     \end{subfigure}
-    \caption{}
+    \caption{Effort totaux subits par la bielle}
+    \label{fig:Effort_totaux}
 \end{figure}
 
-Les efforts maximums et minimums sont repris dans les tableaux \ref{fig:max_3000rpm} et \ref{fig:max_5000rpm}. Les efforts minimums sont 0; il est logique que quand il y a de la traction, il n'y ait pas de compression et vice-versa.
+Les efforts maximums et minimums sont repris dans les tableaux \ref{fig:max_3000rpm} et \ref{fig:max_5000rpm}. Les efforts minimums sont 0; il est logique que lorsqu'il y a de la traction, il n'y ait pas de compression et vice-versa.
 
 
 \begin{figure}[h!]
 \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[h]{0.45\textwidth}
     		\begin{tabular}{|c|c|c|}
     		\hline
     		&\textbf{Max}&\textbf{Min}\\
@@ -241,7 +249,7 @@ Les efforts maximums et minimums sont repris dans les tableaux \ref{fig:max_3000
         \caption{\unit{3000}{rpm}}
         \label{fig:max_3000rpm}
     \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[h]{0.45\textwidth}
         \begin{tabular}{|c|c|c|}
         \hline
     		&\textbf{Max}&\textbf{Min}\\
@@ -266,15 +274,17 @@ La bielle étant contrainte à des efforts de traction et principalement de comp
 
 \section{Dimensionnement de la section de la bielle}
 
-Nous avons effectué divers calculs afin de dimensionner la section (effort de flambage) nécessaire pour que la bielle résite aux différents efforts calculés précédemment. Pour cela, nous avons utilisé la formule de Rankine, à savoir : 
+Nous avons effectué divers calculs afin de dimensionner la section (effort de flambage) nécessaire pour que la bielle résiste aux différents efforts calculés précédemment. Pour cela, nous avons utilisé la formule de Rankine, à savoir : 
 {$$\sigma_{fb Rankine} = \frac{F_b}{A_{crit}}(1+\lambda^2) = \frac{R_e}{S_{Rankine}}$$
 En sachant que : 
-$$ \lambda = \frac{\lambda_{barre}}{\lambda_{lim Euler}} $$
-$$ \lambda_{barre} = \frac{l_{f}}{I_g}$$
-$$ i_g = \sqrt{\frac{I}{A_{crit}}}$$
-$$ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}$$
-
+$$ \lambda = \frac{\lambda_{barre}}{\lambda_{lim Euler}}, $$
+$$ \lambda_{barre} = \frac{l_{f}}{I_g},$$
+$$ i_g = \sqrt{\frac{I}{A_{crit}}},$$ 
+et
+$$ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}.$$
+\begin{center}
  \begin{tabular}{|c|c|c|}
+
         \hline
     		\textbf{Notations}&\textbf{Significations}&\textbf{Valeurs}\\
 		\hline 
@@ -286,13 +296,13 @@ $$ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}$$
 		\hline 
 		$\lambda_{lim Euler}$ & L'élancement limite d'Euler & $ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}$ \\ 
 		\hline 
-		$\lambda_{barre}$ & Elancement réel de la barre & $ \lambda_{barre} = \frac{l_{f}}{I_g}$\\
+		$\lambda_{barre}$ & Élancement réel de la barre & $ \lambda_{barre} = \frac{l_{f}}{I_g}$\\
 		\hline 
 		$i_g$ & Rayon de giration de la section critique & $ i_g = \sqrt{\frac{I}{A_{crit}}}$ \\
 		\hline 
 		$\lambda$ & L'élancement réduit & $ \lambda = \frac{\lambda_{barre}}{\lambda_{lim Euler}} $ \\
 		\hline 
-		$F_b$ & Effort total maximum transmis par la bielle & \unit{4,8*10^4}{Newton}\\
+		$F_b$ & Effort total maximum transmis par la bielle & \unit{4,8\cdot 10^4}{Newton}\\
 		\hline 
 		$l_f$ & Longueur de flambement & \unit{0.1285}{} \\
 		\hline 
@@ -302,11 +312,11 @@ $$ \lambda_{lim Euler} = \pi \sqrt{\frac{E}{R_e}}$$
 		\hline
 		$A_{crit}$ & Section critique & Inconnue\\
 		\hline 
-		\end{tabular} \\
-		\\
-Remarque pour le calcul du moment d'inertie de la section: en se référant à la figure (LEAAAA) pour les différentes longeurs de la section en "I". Sur base de celle-ci, le moment d'inertie vaut:
+\end{tabular}
+\end{center}		
+Remarque pour le calcul du moment d'inertie de la section: en se référant à la figure (LEAAAA) pour les différentes longueurs de la section en "I". Sur base de celle-ci, le moment d'inertie vaut:
 $$ I = \frac{1}{12} (2,25t (3,4t)^3 - 2,3t (2,3t)^3) = \unit{5,86}{mm^2}$$
-Maintenant que toutes les valeurs sont connues, il ne nous reste plus qu'à isoler notre inconnue, à savoir la section, puis de résoudre grace à Matlab. A savoir : 
+Maintenant que toutes les valeurs sont connues, il ne nous reste plus qu'à isoler notre inconnue, à savoir la section, puis de résoudre grâce à Matlab. A savoir : 
 
 $$ A_{crit} = - \frac{F_b}{\sigma ( \frac{F_B (l_f)^2}{\sigma \lambda_l I} - 1)} = \unit{1,99}{cm^2}$$
 
